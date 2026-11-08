@@ -1,5 +1,8 @@
 import Sidebar from '../components/Sidebar'
 import { useState } from 'react'
+import StatsCards from '../components/StatsCards'
+import PriceComparison from '../components/PriceComparison'
+import RecentJobs from '../components/RecentJobs'
 
 function Dashboard() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false)
@@ -27,7 +30,9 @@ function Dashboard() {
             Monitor product prices across Kenyan retailers.
           </p>
         </div>
-
+        <StatsCards />
+        <PriceComparison />
+        <RecentJobs />
       </main>
 
     </div>
