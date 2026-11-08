@@ -4,7 +4,11 @@ import { getPriceComparison } from '../services/priceComparisonService'
 // import { getScrapingJobs } from '../services/scrapingJobService'
 // import type { ScrapingJob } from '../types/scrapingJob'
 
-function StatsCards() {
+interface StatsCardsProps {
+  refreshKey: number
+}
+
+function StatsCards({ refreshKey }: StatsCardsProps) {
   const [averagePrice, setAveragePrice] = useState<string | null>(null)
   const [lowestPrice, setLowestPrice] = useState<string | null>(null)
   // const [highestPrice, setHighestPrice] = useState<string | null>(null)
@@ -56,7 +60,7 @@ function StatsCards() {
     fetchAveragePrice()
     fetchLatestJob()
     fetchProducts()
-  }, [])
+  }, [refreshKey])
 
   const stats = [
     {

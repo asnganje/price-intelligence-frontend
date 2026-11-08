@@ -2,7 +2,11 @@ import { useEffect, useState } from 'react'
 import { getPriceComparison } from '../services/priceComparisonService'
 import type { PriceComparison as PriceComparisonData } from '../types/priceComparison'
 
-function PriceComparison() {
+interface PriceComparisonProps {
+  refreshKey: number
+}
+
+function PriceComparison({ refreshKey }: PriceComparisonProps) {
   const [comparison, setComparison] = useState<PriceComparisonData | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -20,7 +24,7 @@ function PriceComparison() {
     }
 
     fetchComparison()
-  }, [])
+  }, [refreshKey])
 
   if (loading) {
     return <p className="mt-8 text-slate-500">Loading price comparison...</p>
