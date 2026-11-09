@@ -9,10 +9,10 @@ interface SidebarProps {
 function Sidebar({ isOpen, onClose }: SidebarProps) {
   const navigationItems = [
     { name: 'Dashboard', path: '/' },
+    { name: 'Scraping Jobs', path: '/scraping-jobs' },
     { name: 'Products', path: '/products' },
     { name: 'Retailers', path: '/retailers' },
     { name: 'Price History', path: '/price-history' },
-    { name: 'Scraping Jobs', path: '/scraping-jobs' },
   ]
 
   return (
@@ -36,7 +36,7 @@ function Sidebar({ isOpen, onClose }: SidebarProps) {
       >
         <div className="mb-10">
           <h1 className="text-xl font-bold">
-            Price Intelligence
+            Web Scraping Engine
           </h1>
 
           <p className="mt-2 text-xs text-slate-400">
