@@ -14,7 +14,7 @@ function PriceComparison({ refreshKey }: PriceComparisonProps) {
   useEffect(() => {
     async function fetchComparison() {
       try {
-        const data = await getPriceComparison(6)
+        const data = await getPriceComparison(1)
         setComparison(data)
       } catch {
         setError('Failed to load price comparison.')

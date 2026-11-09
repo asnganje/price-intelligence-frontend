@@ -19,7 +19,7 @@ function StatsCards({ refreshKey }: StatsCardsProps) {
   useEffect(() => {
     async function fetchAveragePrice() {
       try {
-        const data = await getPriceComparison(6)
+        const data = await getPriceComparison(1)
 
         setAveragePrice(data.price_statistics.average_price)
         setLowestPrice(data.price_statistics.lowest_price)
