@@ -31,7 +31,7 @@ The frontend provides a centralized interface for monitoring scraping operations
 
 ## Live Application
 
-- **Frontend:** [Price Intelligence Scraper](https://price-intelligence-frontend.onrender.com)
+- **Frontend:** [Price Intelligence Scraper](https://price-intelligence-scraper.onrender.com/)
 - **Backend API:** [Railway](https://web-scraping-api-production-501a.up.railway.app)
 - **API Documentation:** [Swagger UI](https://web-scraping-api-production-501a.up.railway.app/docs)
 
