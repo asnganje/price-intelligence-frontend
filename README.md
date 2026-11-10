@@ -1,75 +1,89 @@
-# React + TypeScript + Vite
+# Price Intelligence Scraper – Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web dashboard for the **Price Intelligence Scraper**, built with React, TypeScript, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+The frontend provides a centralized interface for monitoring scraping operations, managing products and retailers, tracking historical prices, and comparing product prices across Kenyan online retailers.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- **Dashboard:** Overview of products, retailers, prices, and scraping activity.
+- **Products:** View and manage tracked products.
+- **Retailers:** Access integrated retailer information.
+- **Price Comparison:** Compare product prices across retailers.
+- **Price History:** Monitor historical pricing data.
+- **Scraping Jobs:** Initiate scraping operations and monitor job status.
+- **API Integration:** Communicates with the FastAPI backend through REST endpoints.
+- **Responsive UI:** Modern dashboard layout for different screen sizes.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technology Stack
 
-## Expanding the ESLint configuration
+| Technology | Purpose |
+|---|---|
+| React | User interface |
+| TypeScript | Type safety |
+| Vite | Development and build tooling |
+| Tailwind CSS | Styling |
+| REST API | Backend communication |
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Screenshots
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+<!-- Add dashboard screenshots here -->
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Live Application
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Frontend:** [Price Intelligence Scraper](https://price-intelligence-frontend.onrender.com)
+- **Backend API:** [Railway](https://web-scraping-api-production-501a.up.railway.app)
+- **API Documentation:** [Swagger UI](https://web-scraping-api-production-501a.up.railway.app/docs)
 
+## Local Development
+
+Clone the repository:
+
+```bash
+git clone https://github.com/asnganje/price-intelligence-frontend.git
+cd price-intelligence-frontend
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
 ```
+
+Configure the backend API URL in your environment variables:
+
+```env
+VITE_API_BASE_URL=https://web-scraping-api-production-501a.up.railway.app/api/v1
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+## Backend Integration
+
+This frontend connects to the [Price Intelligence Scraper API](https://github.com/asnganje/web-scraping-API), which handles:
+
+- Product and retailer management.
+- Web scraping orchestration.
+- Price collection and updates.
+- Historical price storage.
+- Price comparison.
+
+## Author
+
+**Abdulrahman Nganje**
+
+- GitHub: [@asnganje](https://github.com/asnganje)
+- Frontend: [Repository](https://github.com/asnganje/price-intelligence-frontend)
+- Backend: [Repository](https://github.com/asnganje/web-scraping-API)
+
+*Turning retail pricing data into actionable market intelligence through a modern web interface.*
